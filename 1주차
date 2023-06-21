@@ -26,19 +26,15 @@ Serial.begin(115200);
 void loop() {
 
 digitalWrite(LED_BUILTIN,HIGH);
-
 Serial.print(”HIGH”);
 
 Serial.println(LED_BUILTIN);
-
 delay(1000);
 
 digitalWrite(LED_BUILTIN,LOW);
-
 Serial.print(”LOW”);
 
 Serial.println(LED_BUILTIN);
-
 delay(1000);
 
 }
