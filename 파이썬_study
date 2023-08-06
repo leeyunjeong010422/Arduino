@@ -1,1 +1,15 @@
+import pandas as pd
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
 
+iris=load_iris()
+df=pd.DataFrame(iris.data, columns=['sepalL','sepalW','petalL','petalW'])
+df['target']=iris.target
+
+y=df.target
+X=df.drop(columns=['target'])
+
+model=DecisionTreeClassifier()
+model.fit(X,y)
+ypred=model.predict(X)
+print((y==ypred).mean())
